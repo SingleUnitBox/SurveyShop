@@ -1,0 +1,58 @@
+﻿@page
+@model SurveyShopRazor.Pages.Categories.IndexModel
+
+<div class="container">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">
+                Categories
+            </h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-page="/Categories/Create" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i>
+                Create New Category
+            </a>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Display Order
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var category in Model.Categories.OrderBy(x => x.DisplayOrder))
+            {
+                <tr>
+                    <td>
+                        @category.Id
+                    </td>
+                    <td>
+                        @category.Name
+                    </td>
+                    <td>
+                        @category.DisplayOrder
+                    </td>
+                    <td>
+                        <a asp-page="/Categories/Edit" asp-route-id="@category.Id" class="btn btn-secondary">
+                            <i class="bi bi-pencil-square"></i>Edit</a>
+                        <a asp-page="/Categories/Delete" asp-route-id="@category.Id" class="btn btn-danger">
+                            <i class="bi bi-trash-fill"></i>Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+    
