@@ -5,8 +5,6 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShopWeb", "SurveyShopWeb\SurveyShopWeb.csproj", "{86436BDB-FC11-4332-ADAA-B276A8738011}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShopRazor", "SurveyShopRazor\SurveyShopRazor.csproj", "{CADBC492-1941-45E7-ADA1-2CD053C828ED}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{86436BDB-FC11-4332-ADAA-B276A8738011}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86436BDB-FC11-4332-ADAA-B276A8738011}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86436BDB-FC11-4332-ADAA-B276A8738011}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CADBC492-1941-45E7-ADA1-2CD053C828ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CADBC492-1941-45E7-ADA1-2CD053C828ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CADBC492-1941-45E7-ADA1-2CD053C828ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CADBC492-1941-45E7-ADA1-2CD053C828ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
