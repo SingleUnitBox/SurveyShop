@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SurveyShop.DataAccess\SurveyShop.DataAccess.csproj" />
+    <ProjectReference Include="..\SurveyShop.Models\SurveyShop.Models.csproj" />
+  </ItemGroup>
+
 </Project>

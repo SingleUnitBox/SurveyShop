@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SurveyShopWeb.Data;
-using SurveyShopWeb.Models;
+using SurveyShop.Models;
+using SurveyShopWeb.DataAccess.Data;
 
 namespace SurveyShopWeb.Controllers
 {

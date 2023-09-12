@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SurveyShopWeb.Models;
+using SurveyShop.Models;
 using System.Diagnostics;
 
 namespace SurveyShopWeb.Controllers

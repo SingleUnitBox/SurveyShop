@@ -1,0 +1,11 @@
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\bin\Debug\net7.0\SurveyShop.Utility.deps.json
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\bin\Debug\net7.0\SurveyShop.Utility.dll
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\bin\Debug\net7.0\SurveyShop.Utility.pdb
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\SurveyShop.Utility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\SurveyShop.Utility.AssemblyInfoInputs.cache
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\SurveyShop.Utility.AssemblyInfo.cs
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\SurveyShop.Utility.csproj.CoreCompileInputs.cache
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\SurveyShop.Utility.dll
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\refint\SurveyShop.Utility.dll
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\SurveyShop.Utility.pdb
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Utility\obj\Debug\net7.0\ref\SurveyShop.Utility.dll

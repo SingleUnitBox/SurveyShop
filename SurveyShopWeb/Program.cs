@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SurveyShopWeb.Data;
+using SurveyShopWeb.DataAccess.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 

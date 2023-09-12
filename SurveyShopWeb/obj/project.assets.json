@@ -1132,6 +1132,31 @@
             "rid": "win"
           }
         }
+      },
+      "SurveyShop.DataAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.10",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.10",
+          "SurveyShop.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/SurveyShop.DataAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SurveyShop.DataAccess.dll": {}
+        }
+      },
+      "SurveyShop.Models/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "compile": {
+          "bin/placeholder/SurveyShop.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SurveyShop.Models.dll": {}
+        }
       }
     }
   },
@@ -3452,13 +3477,25 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "SurveyShop.DataAccess/1.0.0": {
+      "type": "project",
+      "path": "../SurveyShop.DataAccess/SurveyShop.DataAccess.csproj",
+      "msbuildProject": "../SurveyShop.DataAccess/SurveyShop.DataAccess.csproj"
+    },
+    "SurveyShop.Models/1.0.0": {
+      "type": "project",
+      "path": "../SurveyShop.Models/SurveyShop.Models.csproj",
+      "msbuildProject": "../SurveyShop.Models/SurveyShop.Models.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.EntityFrameworkCore >= 7.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.10",
-      "Microsoft.EntityFrameworkCore.Tools >= 7.0.10"
+      "Microsoft.EntityFrameworkCore.Tools >= 7.0.10",
+      "SurveyShop.DataAccess >= 1.0.0",
+      "SurveyShop.Models >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3487,7 +3524,14 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\SurveyShop.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\SurveyShop.DataAccess.csproj"
+            },
+            "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj": {
+              "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

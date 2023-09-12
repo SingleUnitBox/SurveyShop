@@ -73,3 +73,7 @@ C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\obj\Debug\net7.0\refint\Survey
 C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\obj\Debug\net7.0\SurveyShopWeb.pdb
 C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\obj\Debug\net7.0\SurveyShopWeb.genruntimeconfig.cache
 C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\obj\Debug\net7.0\ref\SurveyShopWeb.dll
+C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\bin\Debug\net7.0\SurveyShop.DataAccess.dll
+C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\bin\Debug\net7.0\SurveyShop.Models.dll
+C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\bin\Debug\net7.0\SurveyShop.DataAccess.pdb
+C:\Users\cz\source\repos\SurveyShop\SurveyShopWeb\bin\Debug\net7.0\SurveyShop.Models.pdb
