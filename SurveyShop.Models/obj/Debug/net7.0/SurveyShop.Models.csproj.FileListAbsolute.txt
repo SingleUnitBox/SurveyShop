@@ -9,3 +9,4 @@ C:\Users\cz\source\repos\SurveyShop\SurveyShop.Models\obj\Debug\net7.0\SurveySho
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Models\obj\Debug\net7.0\refint\SurveyShop.Models.dll
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Models\obj\Debug\net7.0\SurveyShop.Models.pdb
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Models\obj\Debug\net7.0\ref\SurveyShop.Models.dll
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Models\obj\Debug\net7.0\SurveyShop.Models.csproj.AssemblyReference.cache

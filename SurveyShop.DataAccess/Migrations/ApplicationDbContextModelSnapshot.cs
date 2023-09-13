@@ -21,7 +21,7 @@ namespace SurveyShopWeb.DataAccess.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("SurveyShopWeb.Models.Category", b =>
+            modelBuilder.Entity("SurveyShop.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -34,7 +34,8 @@ namespace SurveyShopWeb.DataAccess.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.HasKey("Id");
 
@@ -59,6 +60,104 @@ namespace SurveyShopWeb.DataAccess.Migrations
                             DisplayOrder = 3,
                             Name = "Controller"
                         });
+                });
+
+            modelBuilder.Entity("SurveyShop.Models.Product", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("BarCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("ListPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Owner")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("Price")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Price100")
+                        .HasColumnType("float");
+
+                    b.Property<double>("Price50")
+                        .HasColumnType("float");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.ToTable("Products");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BarCode = "12 34 56",
+                            CategoryId = 1,
+                            Description = "Compact Total Station",
+                            ListPrice = 8900.0,
+                            Name = "Trimble S5",
+                            Owner = "Trimble Sweden",
+                            Price = 5900.0,
+                            Price100 = 3900.0,
+                            Price50 = 4900.0
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BarCode = "24 48 96",
+                            CategoryId = 2,
+                            Description = "Robust Total Station",
+                            ListPrice = 7900.0,
+                            Name = "Trimble S6",
+                            Owner = "Trimble Sweden",
+                            Price = 6900.0,
+                            Price100 = 4900.0,
+                            Price50 = 5900.0
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BarCode = "15 17 19",
+                            CategoryId = 1,
+                            Description = "Heavy Total Station",
+                            ListPrice = 9900.0,
+                            Name = "Trimble S7",
+                            Owner = "Trimble Sweden",
+                            Price = 8900.0,
+                            Price100 = 6900.0,
+                            Price50 = 7900.0
+                        });
+                });
+
+            modelBuilder.Entity("SurveyShop.Models.Product", b =>
+                {
+                    b.HasOne("SurveyShop.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
                 });
 #pragma warning restore 612, 618
         }

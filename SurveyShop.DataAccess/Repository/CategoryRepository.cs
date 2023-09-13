@@ -18,7 +18,7 @@ namespace SurveyShop.DataAccess.Repository
             _applicationDbContext = applicationDbContext;
         }
 
-        void ICategoryRepository.Update(Category category)
+        public void Update(Category category)
         {
             _applicationDbContext.Categories.Update(category);
         }
