@@ -36,6 +36,7 @@ namespace SurveyShopWeb.DataAccess.Data
                     Price50 = 4900,
                     Price100 = 3900,
                     CategoryId = 1,
+                    ImageUrl = "",
                 },
                 new Product
                 {
@@ -49,6 +50,7 @@ namespace SurveyShopWeb.DataAccess.Data
                     Price50 = 5900,
                     Price100 = 4900,
                     CategoryId = 2,
+                    ImageUrl = "",
                 },
                 new Product
                 {
@@ -62,6 +64,7 @@ namespace SurveyShopWeb.DataAccess.Data
                     Price50 = 7900,
                     Price100 = 6900,
                     CategoryId = 1,
+                    ImageUrl = "",
                 }
             };
             modelBuilder.Entity<Product>().HasData(products);    

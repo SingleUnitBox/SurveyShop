@@ -81,6 +81,10 @@ namespace SurveyShopWeb.DataAccess.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<double>("ListPrice")
                         .HasColumnType("float");
 
@@ -114,6 +118,7 @@ namespace SurveyShopWeb.DataAccess.Migrations
                             BarCode = "12 34 56",
                             CategoryId = 1,
                             Description = "Compact Total Station",
+                            ImageUrl = "",
                             ListPrice = 8900.0,
                             Name = "Trimble S5",
                             Owner = "Trimble Sweden",
@@ -127,6 +132,7 @@ namespace SurveyShopWeb.DataAccess.Migrations
                             BarCode = "24 48 96",
                             CategoryId = 2,
                             Description = "Robust Total Station",
+                            ImageUrl = "",
                             ListPrice = 7900.0,
                             Name = "Trimble S6",
                             Owner = "Trimble Sweden",
@@ -140,6 +146,7 @@ namespace SurveyShopWeb.DataAccess.Migrations
                             BarCode = "15 17 19",
                             CategoryId = 1,
                             Description = "Heavy Total Station",
+                            ImageUrl = "",
                             ListPrice = 9900.0,
                             Name = "Trimble S7",
                             Owner = "Trimble Sweden",
