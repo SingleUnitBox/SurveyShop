@@ -13,6 +13,34 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\00286032-40dc-4b60-8243-e73d2d99881d.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\00286032-40dc-4b60-8243-e73d2d99881d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\1b8fa786-af4c-40a8-91c1-811792220b67.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\1b8fa786-af4c-40a8-91c1-811792220b67.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\4605f0da-21d7-4769-9bcf-5f1d3ce9d17a.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\4605f0da-21d7-4769-9bcf-5f1d3ce9d17a.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\7f548a24-cbd2-4ed0-9eda-9aec350c1816.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\7f548a24-cbd2-4ed0-9eda-9aec350c1816.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\8c98fab5-7a9d-4940-b23b-627c23beaa1c.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\8c98fab5-7a9d-4940-b23b-627c23beaa1c.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\bff5248d-2ff2-4311-a01a-800be0c7f300.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\bff5248d-2ff2-4311-a01a-800be0c7f300.jpg"
+    },
+    {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\js\\product.js",
+      "PackagePath": "staticwebassets\\js\\product.js"
+    },
+    {
       "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

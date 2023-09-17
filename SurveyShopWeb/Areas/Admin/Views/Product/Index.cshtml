@@ -15,7 +15,7 @@
             </a>
         </div>
     </div>
-    <table class="table table-bordered table-striped">
+    <table id="tblData" class="table table-bordered table-striped">
         <thead>
             <tr>
                 <th>
@@ -37,38 +37,12 @@
 
                 </th>
             </tr>
-        </thead>
-        <tbody>
-            @foreach (var product in Model)
-            {
-                <tr>
-                    <td>
-                        @product.Id
-                    </td>
-                    <td>
-                        @product.Name
-                    </td>
-                    <td>
-                        @product.BarCode
-                    </td>
-                    <td>
-                        @product.Price
-                    </td>
-                    <td>
-                        @product.Category.Name
-                    </td>
-                    <td>
-                        <a asp-controller="Product" asp-action="Upsert" asp-route-id="@product.Id" class="btn btn-secondary">
-                            <i class="bi bi-pencil-square"></i>Edit
-                        </a>
-                        <a asp-controller="Product" asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger">
-                            <i class="bi bi-trash-fill"></i>Delete
-                        </a>
-                    </td>
-                </tr>
-            }
-        </tbody>
+        </thead>          
     </table>
 </div>
+
+@section Scripts {
+    <script src="~/js/product.js"></script>
+}
 
 

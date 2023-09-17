@@ -58,6 +58,14 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
                 string wwwRootPath = _webHostEnvironment.WebRootPath;
                 if (file != null)
                 {
+                    if (!string.IsNullOrEmpty(productViewModel.Product.ImageUrl))
+                    {
+                        var oldImagePath = Path.Combine(wwwRootPath, productViewModel.Product.ImageUrl.TrimStart('\\'));
+                        if (System.IO.File.Exists(oldImagePath))
+                        {
+                            System.IO.File.Delete(oldImagePath);
+                        }
+                    }
                     string fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
                     string productPath = Path.Combine(wwwRootPath, @"images\product\");
 
@@ -68,22 +76,22 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
 
                     productViewModel.Product.ImageUrl = @"\images\product\" + fileName;
                 }
-            
 
-            if (productViewModel.Product.Id == 0)
-            {
-                _unitOfWork.Product.Add(productViewModel.Product);
-                TempData["success"] = "Product has been created successfully.";
-            }
-            else
-            {
-                _unitOfWork.Product.Update(productViewModel.Product);
-                TempData["success"] = "Product has been updated successfully.";
 
+                if (productViewModel.Product.Id == 0)
+                {
+                    _unitOfWork.Product.Add(productViewModel.Product);
+                    TempData["success"] = "Product has been created successfully.";
+                }
+                else
+                {
+                    _unitOfWork.Product.Update(productViewModel.Product);
+                    TempData["success"] = "Product has been updated successfully.";
+
+                }
+                _unitOfWork.Save();
+                return RedirectToAction(nameof(Index));
             }
-            _unitOfWork.Save();
-            return RedirectToAction(nameof(Index));
-        }
             else
             {
                 productViewModel.CategoryList = _unitOfWork.Category.GetAll()
@@ -93,32 +101,35 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
                         Value = x.Id.ToString(),
                     });
                 return View(productViewModel);
-}
+            }
         }
 
+        #region API CALLS
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            var products = _unitOfWork.Product.GetAll(includeProperties: "Category").ToList();
+            return Json(new { data = products });
+        }
+        [HttpDelete]
         public IActionResult Delete(int? id)
-{
-    if (id == null || id == 0)
-    {
-        return NotFound();
-    }
-    var product = _unitOfWork.Product.Get(x => x.Id == id);
-    return View(product);
-}
-[HttpPost]
-[ActionName("Delete")]
-public IActionResult DeletePost(int id)
+        {
+            var product = _unitOfWork.Product.Get(x => x.Id == id);
+            if (product == null)
+            {
+                return Json(new { success = false, message = "Error while deleteing." });
+            }
 
-{
-    var productFrtomDb = _unitOfWork.Product.Get(x => x.Id == id);
-    if (productFrtomDb == null)
-    {
-        return NotFound();
-    }
-    _unitOfWork.Product.Remove(productFrtomDb);
-    _unitOfWork.Save();
-    TempData["success"] = "Product has been deleted successfully.";
-    return RedirectToAction(nameof(Index));
-}
+            var oldImagePath = Path.Combine(_webHostEnvironment.WebRootPath, product.ImageUrl.TrimStart('\\'));
+            if (System.IO.File.Exists(oldImagePath))
+            {
+                System.IO.File.Delete(oldImagePath);
+            }
+
+            _unitOfWork.Product.Remove(product);
+            _unitOfWork.Save();
+            return Json(new { success = true, message = "Product has been delted successfully." });
+        }
+        #endregion
     }
 }
