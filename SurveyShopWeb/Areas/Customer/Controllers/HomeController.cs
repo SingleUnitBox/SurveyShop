@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SurveyShop.DataAccess.Repository.IRepository;
 using SurveyShop.Models;
 using System.Diagnostics;
+using System.Security.Claims;
 
 namespace SurveyShopWeb.Areas.Customer.Controllers
 {
@@ -24,11 +26,42 @@ namespace SurveyShopWeb.Areas.Customer.Controllers
             return View(products);
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details(int productId)
         {
-            Product product = _unitOfWork.Product.Get(x => x.Id == id, includeProperties: "Category");
-            
-            return View(product);
+            ShoppingCart shoppingCart = new()
+            {
+                Product = _unitOfWork.Product.Get(x => x.Id == productId, includeProperties: "Category"),
+                Count = 1,
+                ProductId = productId,
+            };
+                      
+            return View(shoppingCart);
+        }
+        [HttpPost]
+        [Authorize]
+        public IActionResult Details(ShoppingCart shoppingCart)
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            shoppingCart.ApplicationUserId = userId;
+            var cartFromDb = _unitOfWork.ShoppingCart.Get(u => u.ApplicationUserId == userId &&
+                u.ProductId == shoppingCart.ProductId);
+
+            if (cartFromDb == null)
+            {
+                _unitOfWork.ShoppingCart.Add(shoppingCart);
+                _unitOfWork.Save();
+            }
+            else
+            {
+                cartFromDb.Count += shoppingCart.Count;
+                _unitOfWork.ShoppingCart.Update(cartFromDb);
+                _unitOfWork.Save();
+            }
+
+            TempData["success"] = "Cart has been updated successfully.";
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Privacy()
