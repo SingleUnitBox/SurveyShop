@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ViewFeatures;
 using Microsoft.EntityFrameworkCore.Query.Internal;
 using Moq;
 using SurveyShop.DataAccess.Repository.IRepository;
@@ -41,10 +43,12 @@ namespace SurveyShopWeb
         [Test]
         public void CreateCategory_InvalidModel_ReturnsView()
         {
+            //Arrange
             _categoryController.ModelState.AddModelError("testError", "testErrorMessage");
-
+            //Act
             var result = _categoryController.Create(new Category());
-
+            //Assert
+            Assert.IsInstanceOf<ViewResult>(result);
             ViewResult viewResult = result as ViewResult;
             _unitOfWork.Verify(x => x.Category.Add(new Category()), Times.Never);
         }
@@ -55,6 +59,41 @@ namespace SurveyShopWeb
             var result = _categoryController.Edit(invalidInput);
 
             Assert.AreEqual(typeof(NotFoundResult), result.GetType());
+        }
+        [Test]
+        public void EditCategory_ValidId_ReturnsViewWithCategory()
+        {
+            //Arrange
+            Category category = new Category { Id = 1, Name = "category1", DisplayOrder = 1 };
+            _unitOfWork.Setup(x => x.Category.Get(It.IsAny<Expression<Func<Category, bool>>>(), It.IsAny<string>(), It.IsAny<bool>()))
+                       .Returns(category);
+            var validId = 1;
+
+            // Act
+            var result = _categoryController.Edit(validId) as ViewResult;
+
+            // Assert
+            Assert.IsNotNull(result);
+            Assert.IsNotNull(result.Model);
+            Assert.IsInstanceOf<Category>(result.Model);
+            Assert.AreEqual(category, result.Model);
+
+        }
+        [Test]
+        public void EditCategory_ValidCategory_RedirectsToIndex()
+        {
+            Category category = new Category { Id = 1, Name = "category1", DisplayOrder = 1 };
+            _unitOfWork.Setup(x => x.Category.Get(It.IsAny<Expression<Func<Category, bool>>>(), It.IsAny<string>(), It.IsAny<bool>()))
+                .Returns(category);
+
+            var tempData = new TempDataDictionary(new DefaultHttpContext(), Mock.Of<ITempDataProvider>());
+            _categoryController.TempData = tempData;
+
+            var result = _categoryController.Edit(category);
+
+            Assert.IsInstanceOf<RedirectToActionResult>(result);
+            var redirectResult = result as RedirectToActionResult;
+            Assert.AreEqual("Index", redirectResult.ActionName);
         }
     }
 }
