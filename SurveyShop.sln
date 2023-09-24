@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShop.Models", "Survey
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShop.Utility", "SurveyShop.Utility\SurveyShop.Utility.csproj", "{F13B06DB-0130-41F6-A321-3FE7D7B73D02}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyShop.DataAccess.Tests", "SurveyShop.DataAccess.Test\SurveyShop.DataAccess.Tests.csproj", "{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyShop.Web.Tests", "SurveyShop.Web.Tests\SurveyShop.Web.Tests.csproj", "{73845090-601B-4F8A-922D-1DF9C4F13EE2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{F13B06DB-0130-41F6-A321-3FE7D7B73D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F13B06DB-0130-41F6-A321-3FE7D7B73D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F13B06DB-0130-41F6-A321-3FE7D7B73D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

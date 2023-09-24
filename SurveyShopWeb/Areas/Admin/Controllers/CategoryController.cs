@@ -37,7 +37,7 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
         }
         public IActionResult Edit(int? id)
         {
-            if (id == null)
+            if (id == null || id == 0)
             {
                 return NotFound();
             }
