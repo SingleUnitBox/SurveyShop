@@ -13,12 +13,18 @@ namespace SurveyShop.DataAccess.Repository
         private readonly ApplicationDbContext _applicationDbContext;
         public ICategoryRepository Category { get; private set; }
         public IProductRepository Product { get; private set; }
+        public ICompanyRepository Company { get; private set; }
+        public IShoppingCartRepository ShoppingCart { get; private set; }
+        public IApplicationUserRepository ApplicationUser { get; private set; }
 
         public UnitOfWork(ApplicationDbContext applicationDbContext)
         {
             _applicationDbContext = applicationDbContext;
             Category = new CategoryRepository(_applicationDbContext);
             Product = new ProductRepository(_applicationDbContext);
+            Company = new CompanyRepository(_applicationDbContext);      
+            ShoppingCart = new ShoppingCartRepository(_applicationDbContext);
+            ApplicationUser = new ApplicationUserRepository(_applicationDbContext);
         }
         
 
