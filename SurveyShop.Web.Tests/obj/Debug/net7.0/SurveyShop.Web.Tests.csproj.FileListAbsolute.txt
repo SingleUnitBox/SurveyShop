@@ -1,9 +1,4 @@
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\CoverletSourceRootsMapping
-C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.csproj.AssemblyReference.cache
-C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.AssemblyInfoInputs.cache
-C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.AssemblyInfo.cs
-C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.csproj.CoreCompileInputs.cache
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\testhost.dll
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\SurveyShopWeb.deps.json
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\SurveyShopWeb.runtimeconfig.json
@@ -363,6 +358,11 @@ C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\Survey
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\SurveyShop.DataAccess.pdb
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\SurveyShop.Models.pdb
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\bin\Debug\net7.0\SurveyShop.Utility.pdb
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.csproj.AssemblyReference.cache
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.AssemblyInfoInputs.cache
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.AssemblyInfo.cs
+C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.csproj.CoreCompileInputs.cache
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.csproj.CopyComplete
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\SurveyShop.Web.Tests.dll
 C:\Users\cz\source\repos\SurveyShop\SurveyShop.Web.Tests\obj\Debug\net7.0\refint\SurveyShop.Web.Tests.dll
