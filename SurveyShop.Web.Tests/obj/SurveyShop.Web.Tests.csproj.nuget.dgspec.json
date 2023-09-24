@@ -1,0 +1,402 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Web.Tests\\SurveyShop.Web.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\SurveyShop.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\SurveyShop.DataAccess.csproj",
+        "projectName": "SurveyShop.DataAccess",
+        "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\SurveyShop.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\cz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj": {
+                "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj",
+        "projectName": "SurveyShop.Models",
+        "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj",
+        "packagesPath": "C:\\Users\\cz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Mvc": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            },
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Utility\\SurveyShop.Utility.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Utility\\SurveyShop.Utility.csproj",
+        "projectName": "SurveyShop.Utility",
+        "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Utility\\SurveyShop.Utility.csproj",
+        "packagesPath": "C:\\Users\\cz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Utility\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Web.Tests\\SurveyShop.Web.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Web.Tests\\SurveyShop.Web.Tests.csproj",
+        "projectName": "SurveyShop.Web.Tests",
+        "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Web.Tests\\SurveyShop.Web.Tests.csproj",
+        "packagesPath": "C:\\Users\\cz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Web.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\SurveyShopWeb.csproj": {
+                "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\SurveyShopWeb.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.6.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\SurveyShopWeb.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\SurveyShopWeb.csproj",
+        "projectName": "SurveyShopWeb",
+        "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\SurveyShopWeb.csproj",
+        "packagesPath": "C:\\Users\\cz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\cz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\SurveyShop.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.DataAccess\\SurveyShop.DataAccess.csproj"
+              },
+              "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj": {
+                "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Models\\SurveyShop.Models.csproj"
+              },
+              "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Utility\\SurveyShop.Utility.csproj": {
+                "projectPath": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShop.Utility\\SurveyShop.Utility.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

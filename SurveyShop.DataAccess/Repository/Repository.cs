@@ -7,6 +7,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace SurveyShop.DataAccess.Repository
 {
@@ -24,9 +25,17 @@ namespace SurveyShop.DataAccess.Repository
             _dbSet.Add(entity);
         }
 
-        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null)
+        public T Get(Expression<Func<T, bool>> filter, string? includeProperties = null, bool tracked = false)
         {
-            IQueryable<T> query = _dbSet;
+            IQueryable<T> query;
+            if (tracked)
+            {
+                query = _dbSet;                
+            }
+            else
+            {
+                query = _dbSet.AsNoTracking();              
+            }
             query = query.Where(filter);
 
             if (!string.IsNullOrEmpty(includeProperties))
@@ -38,11 +47,17 @@ namespace SurveyShop.DataAccess.Repository
                 }
             }
             return query.FirstOrDefault();
+
+
         }
 
-        public IEnumerable<T> GetAll(string? includeProperties = null)
+        public IEnumerable<T> GetAll(Expression<Func<T, bool>>? filter = null, string? includeProperties = null)
         {
             IQueryable<T> query = _dbSet;
+            if (filter != null)
+            {
+                query = query.Where(filter);
+            }
 
             if (includeProperties != null)
             {

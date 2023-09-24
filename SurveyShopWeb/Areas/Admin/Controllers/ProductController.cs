@@ -5,6 +5,7 @@ using SurveyShop.DataAccess.Repository.IRepository;
 using SurveyShop.Models;
 using SurveyShop.Models.ViewModels;
 using SurveyShop.Utility;
+using SurveyShopWeb.DataAccess.Data;
 using System.Drawing;
 
 namespace SurveyShopWeb.Areas.Admin.Controllers
@@ -17,7 +18,8 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
 
         public ProductController(IUnitOfWork unitOfWork,
-            IWebHostEnvironment webHostEnvironment)
+            IWebHostEnvironment webHostEnvironment,
+            ApplicationDbContext applicationDbContext)
         {
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;

@@ -5,11 +5,15 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShopWeb", "SurveyShopWeb\SurveyShopWeb.csproj", "{86436BDB-FC11-4332-ADAA-B276A8738011}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyShop.DataAccess", "SurveyShop.DataAccess\SurveyShop.DataAccess.csproj", "{9598BC8D-383E-4DAB-9C3D-36DD3ACE4A43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShop.DataAccess", "SurveyShop.DataAccess\SurveyShop.DataAccess.csproj", "{9598BC8D-383E-4DAB-9C3D-36DD3ACE4A43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyShop.Models", "SurveyShop.Models\SurveyShop.Models.csproj", "{412364BC-EC02-48D9-8F9E-546106A02C23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShop.Models", "SurveyShop.Models\SurveyShop.Models.csproj", "{412364BC-EC02-48D9-8F9E-546106A02C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyShop.Utility", "SurveyShop.Utility\SurveyShop.Utility.csproj", "{F13B06DB-0130-41F6-A321-3FE7D7B73D02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SurveyShop.Utility", "SurveyShop.Utility\SurveyShop.Utility.csproj", "{F13B06DB-0130-41F6-A321-3FE7D7B73D02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyShop.DataAccess.Tests", "SurveyShop.DataAccess.Test\SurveyShop.DataAccess.Tests.csproj", "{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SurveyShop.Web.Tests", "SurveyShop.Web.Tests\SurveyShop.Web.Tests.csproj", "{73845090-601B-4F8A-922D-1DF9C4F13EE2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{F13B06DB-0130-41F6-A321-3FE7D7B73D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F13B06DB-0130-41F6-A321-3FE7D7B73D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F13B06DB-0130-41F6-A321-3FE7D7B73D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D943C7CF-3AD5-4603-AA06-B0CFE2808CC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73845090-601B-4F8A-922D-1DF9C4F13EE2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
