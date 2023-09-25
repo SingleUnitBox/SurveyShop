@@ -21,12 +21,19 @@ namespace SurveyShopWeb
     {
         private CategoryController _categoryController;
         private Mock<IUnitOfWork> _unitOfWork;
+        private Category _category = new Category { Id = 1, Name = "category1", DisplayOrder = 1 };
 
         [SetUp]
         public void Setup()
         {
             _unitOfWork = new Mock<IUnitOfWork>();
             _categoryController = new CategoryController(_unitOfWork.Object);
+
+            _unitOfWork.Setup(x => x.Category.Get(It.IsAny<Expression<Func<Category, bool>>>(), It.IsAny<string>(), It.IsAny<bool>()))
+                       .Returns(_category);
+
+            var tempData = new TempDataDictionary(new DefaultHttpContext(), Mock.Of<ITempDataProvider>());
+            _categoryController.TempData = tempData;
         }
 
         [Test]
@@ -64,11 +71,7 @@ namespace SurveyShopWeb
         public void EditCategory_ValidId_ReturnsViewWithCategory()
         {
             //Arrange
-            Category category = new Category { Id = 1, Name = "category1", DisplayOrder = 1 };
-            _unitOfWork.Setup(x => x.Category.Get(It.IsAny<Expression<Func<Category, bool>>>(), It.IsAny<string>(), It.IsAny<bool>()))
-                       .Returns(category);
             var validId = 1;
-
             // Act
             var result = _categoryController.Edit(validId) as ViewResult;
 
@@ -76,24 +79,46 @@ namespace SurveyShopWeb
             Assert.IsNotNull(result);
             Assert.IsNotNull(result.Model);
             Assert.IsInstanceOf<Category>(result.Model);
-            Assert.AreEqual(category, result.Model);
+            Assert.AreEqual(_category, result.Model);
 
         }
         [Test]
         public void EditCategory_ValidCategory_RedirectsToIndex()
         {
-            Category category = new Category { Id = 1, Name = "category1", DisplayOrder = 1 };
-            _unitOfWork.Setup(x => x.Category.Get(It.IsAny<Expression<Func<Category, bool>>>(), It.IsAny<string>(), It.IsAny<bool>()))
-                .Returns(category);
-
-            var tempData = new TempDataDictionary(new DefaultHttpContext(), Mock.Of<ITempDataProvider>());
-            _categoryController.TempData = tempData;
-
-            var result = _categoryController.Edit(category);
+            var result = _categoryController.Edit(_category);
 
             Assert.IsInstanceOf<RedirectToActionResult>(result);
             var redirectResult = result as RedirectToActionResult;
             Assert.AreEqual("Index", redirectResult.ActionName);
+        }
+        [Test]
+        public void DeleteCategory_NullInput_ReturnsNotFoundResult()
+        {
+            var result = _categoryController.Delete(null);
+
+            Assert.AreEqual(typeof(NotFoundResult), result.GetType());
+
+        }
+        [Test]
+        public void DeleteCategory_InvalidInput_ReturnsNotFoundResult()
+        {
+            Category? category = null;
+            _unitOfWork.Setup(x => x.Category.Get(It.IsAny<Expression<Func<Category, bool>>>(), It.IsAny<string>(), It.IsAny<bool>()))
+                .Returns(category);
+
+            var invalidInput = 123;
+            var result = _categoryController.Delete(invalidInput);
+
+            Assert.AreEqual(typeof(NotFoundResult), result.GetType());
+
+        }
+        [Test]
+        public void DeleteCategory_ValidInputCategory_RemovesCategory()
+        {
+            var result = _categoryController.DeletePOST(_category.Id);
+
+            Assert.IsInstanceOf<RedirectToActionResult>(result);
+          
         }
     }
 }
