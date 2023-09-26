@@ -18,8 +18,7 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
         private readonly IWebHostEnvironment _webHostEnvironment;
 
         public ProductController(IUnitOfWork unitOfWork,
-            IWebHostEnvironment webHostEnvironment,
-            ApplicationDbContext applicationDbContext)
+            IWebHostEnvironment webHostEnvironment)
         {
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
