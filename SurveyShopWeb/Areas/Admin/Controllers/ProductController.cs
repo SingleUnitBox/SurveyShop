@@ -16,12 +16,15 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
     {
         private readonly IUnitOfWork _unitOfWork;
         private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IFileHelper _fileHelper;
 
         public ProductController(IUnitOfWork unitOfWork,
-            IWebHostEnvironment webHostEnvironment)
+            IWebHostEnvironment webHostEnvironment,
+            IFileHelper fileHelper)
         {
             _unitOfWork = unitOfWork;
             _webHostEnvironment = webHostEnvironment;
+            _fileHelper = fileHelper;
         }
         public IActionResult Index()
         {
@@ -72,11 +75,9 @@ namespace SurveyShopWeb.Areas.Admin.Controllers
                     }
                     string fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
                     string productPath = Path.Combine(wwwRootPath, @"images\product\");
+                    string filePath = Path.Combine(productPath, fileName);
 
-                    using (var fileStream = new FileStream(Path.Combine(productPath, fileName), FileMode.Create))
-                    {
-                        file.CopyTo(fileStream);
-                    }
+                    _fileHelper.SaveFile(filePath, file);
 
                     productViewModel.Product.ImageUrl = @"\images\product\" + fileName;
                 }

@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\cdb81181-7cd5-4243-ae80-944ee0d65f04.jpg",
+      "PackagePath": "staticwebassets\\images\\product\\cdb81181-7cd5-4243-ae80-944ee0d65f04.jpg"
+    },
+    {
       "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\js\\company.js",
       "PackagePath": "staticwebassets\\js\\company.js"
     },
