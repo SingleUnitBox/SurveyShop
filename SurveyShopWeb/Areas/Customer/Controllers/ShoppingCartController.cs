@@ -13,6 +13,8 @@ namespace SurveyShopWeb.Areas.Customer.Controllers
     public class ShoppingCartController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
+        [BindProperty]
+        public ShoppingCartViewModel ShoppingCartViewModel { get; set; }
 
         public ShoppingCartController(IUnitOfWork unitOfWork)
         {
@@ -23,19 +25,39 @@ namespace SurveyShopWeb.Areas.Customer.Controllers
             var claimsIdentity = (ClaimsIdentity)User.Identity;
             var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
 
-            ShoppingCartViewModel shoppingCartViewModel = new()
+            ShoppingCartViewModel = new()
             {
                 CartList = _unitOfWork.ShoppingCart
                 .GetAll(x => x.ApplicationUserId == userId, includeProperties: "Product")
             };
 
-            foreach (var cart in shoppingCartViewModel.CartList)
+            foreach (var cart in ShoppingCartViewModel.CartList)
             {
                 cart.Price = GetPriceBasedOnQuantity(cart);
-                shoppingCartViewModel.OrderTotal += (cart.Price * cart.Count);
+                ShoppingCartViewModel.OrderTotal += (cart.Price * cart.Count);
             }
 
-            return View(shoppingCartViewModel);
+            return View(ShoppingCartViewModel);
+        }
+        public IActionResult Summary()
+        {
+            var claimsIdentity = (ClaimsIdentity)User.Identity;
+            var userId = claimsIdentity.FindFirst(ClaimTypes.NameIdentifier).Value;
+
+            ShoppingCartViewModel = new()
+            {
+                CartList = _unitOfWork.ShoppingCart
+                    .GetAll(x => x.ApplicationUserId == userId, includeProperties: "Product"),
+
+            };
+
+            foreach (var cart in ShoppingCartViewModel.CartList)
+            {
+                cart.Price = GetPriceBasedOnQuantity(cart);
+                ShoppingCartViewModel.OrderTotal += (cart.Price * cart.Count);
+            }
+
+            return View(ShoppingCartViewModel);
         }
         private double GetPriceBasedOnQuantity(ShoppingCart shoppingCart)
         {
@@ -80,6 +102,7 @@ namespace SurveyShopWeb.Areas.Customer.Controllers
             _unitOfWork.Save();
             return RedirectToAction(nameof(Index));
         }
+
         public IActionResult Remove(int? shoppingCartId)
         {
             var cartFromDb = _unitOfWork.ShoppingCart.Get(x => x.Id == shoppingCartId, tracked: true);

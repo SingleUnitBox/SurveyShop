@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "C721Rlu0UXm7ykKL4wuNFNZX2jDi4BHrk32YaJdpFws=",
+  "Hash": "3+3txuSIHQPkcfBR/TgfRNNNHFPdyk31tu/swX9BHBM=",
   "Source": "SurveyShopWeb",
   "BasePath": "_content/SurveyShopWeb",
   "Mode": "Default",
@@ -1103,6 +1103,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\images\\product\\cdb81181-7cd5-4243-ae80-944ee0d65f04.jpg",
+      "SourceId": "SurveyShopWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\",
+      "BasePath": "_content/SurveyShopWeb",
+      "RelativePath": "images/product/cdb81181-7cd5-4243-ae80-944ee0d65f04.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\product\\cdb81181-7cd5-4243-ae80-944ee0d65f04.jpg"
     },
     {
       "Identity": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\js\\company.js",
