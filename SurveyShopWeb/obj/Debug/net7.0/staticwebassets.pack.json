@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\js\\company.js"
     },
     {
+      "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\js\\order.js",
+      "PackagePath": "staticwebassets\\js\\order.js"
+    },
+    {
       "Id": "C:\\Users\\cz\\source\\repos\\SurveyShop\\SurveyShopWeb\\wwwroot\\js\\product.js",
       "PackagePath": "staticwebassets\\js\\product.js"
     },
