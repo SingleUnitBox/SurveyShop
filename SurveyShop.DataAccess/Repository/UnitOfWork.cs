@@ -16,6 +16,8 @@ namespace SurveyShop.DataAccess.Repository
         public ICompanyRepository Company { get; private set; }
         public IShoppingCartRepository ShoppingCart { get; private set; }
         public IApplicationUserRepository ApplicationUser { get; private set; }
+        public IOrderHeaderRepository OrderHeader { get; private set; }
+        public IOrderDetailRepository OrderDetail { get; set; }
 
         public UnitOfWork(ApplicationDbContext applicationDbContext)
         {
@@ -25,6 +27,8 @@ namespace SurveyShop.DataAccess.Repository
             Company = new CompanyRepository(_applicationDbContext);      
             ShoppingCart = new ShoppingCartRepository(_applicationDbContext);
             ApplicationUser = new ApplicationUserRepository(_applicationDbContext);
+            OrderHeader = new OrderHeaderRepository(_applicationDbContext);
+            OrderDetail = new OrderDetailRepository(_applicationDbContext);
         }
         
 
