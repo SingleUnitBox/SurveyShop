@@ -7,6 +7,7 @@ A fantastic store that does amazing things.
 - [Getting Started](#Installation)
 
 - [Usage](#Usage)
+- [Folder Structure](#folder-structure)
 - [Configuration](#configuration)
 - [Contributing](#contributing)
 - [Testing](#testing)
@@ -22,9 +23,31 @@ Welcome to the SurveyShop ASP.NET Core MVC project! This project is designed to 
 
 ## Prerequisites
 Before getting started, ensure you have the following installed on your system:
-.NET Core SDK
-Visual Studio or Visual Studio Code
+- .NET Core SDK
+- Visual Studio or Visual Studio Code
 
 ## Installation
 
-## Usage
+## Folder Structure
+```markdown
+ProjectRoot/
+├── Controllers/
+├── Views/
+├── Models/
+├── Services/
+├── Repositories/
+├── Utilities/
+├── wwwroot/
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── Areas/
+├── Data/
+│   └── Migrations/
+├── Extensions/
+├── Middleware/
+├── Filters/
+├── ViewModels/
+├── Tests/
+```
+asd
